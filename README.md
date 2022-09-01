@@ -4,7 +4,10 @@ Version - 1.1.0
 
 		  Binary downloads:
 				Scala 2.11  - kafka_2.11-1.1.0.tgz (asc, sha512)
- 
+
+Part 1 :
+----------------------------------------
+
 #command to start zookeeper
 
 zookeeper-server-start.bat C:\kafka_2.11-1.1.0\config\zookeeper.properties
