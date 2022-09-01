@@ -37,3 +37,19 @@ kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic first_topic
 
 C:\kafka_2.11-1.1.0\bin\windows>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic first_topic
 
+Part 2 :
+----------------------------------------
+
+1.start zookeeper
+2.start kafka server
+3.start kafka-publisher java project
+4.start kafak-consumer java project
+
+GET : localhost:8080/consumeStringMessage
+
+GET : localhost:9091/publishJson
+
+GET : localhost:8080/consumeStringMessage
+
+GET : localhost:8080/consumeJsonMessage
+
