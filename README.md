@@ -24,10 +24,6 @@ kafka-topics.bat --bootstrap-server localhost:9092 --create --topic mytopic --pa
 
 kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic first_topic
 
-#path
-
-C:\kafka_2.11-1.1.0\bin\windows>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic first_topic
-
 Part 2 :
 ----------------------------------------
 
