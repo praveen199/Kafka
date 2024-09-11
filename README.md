@@ -8,16 +8,20 @@ Version - 1.1.0
 Part 1 :
 ----------------------------------------
 
-#command to start zookeeper
+command to start zookeeper
+----------------------------------------
 zookeeper-server-start.bat C:\kafka_2.11-1.1.0\config\zookeeper.properties
 
-#command to start kafka server
+command to start kafka server
+----------------------------------------
 kafka-server-start.bat C:\kafka_2.11-1.1.0\config\server.properties
 
-#command to create topic
+command to create topic
+----------------------------------------
 kafka-topics.bat --bootstrap-server localhost:9092 --create --topic mytopic --partitions 2 --replication-factor 3
 
-#command to Consume a message
+command to Consume a message
+----------------------------------------
 kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic first_topic
 
 Part 2 :
@@ -56,13 +60,16 @@ Part 3 :
 	lombok
 
 
-#List down all available topics
+List down all available topics
+----------------------------------------
 kafka-topics.bat --list --zookeeper localhost:2181
 
-#Produce a message
+Produce a message
+----------------------------------------
 kafka-console-producer.bat --broker-list localhost:9092 --topic cloud_stream_topic
 
-#Consume a message
+Consume a message
+----------------------------------------
 kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic cloud_stream_topic
 
 
