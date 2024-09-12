@@ -1,10 +1,9 @@
 # Kafka download
 
-Version - 1.1.0
+Kafka version : 3.7.1
 
 		  Binary downloads:
-				Scala 2.11  - kafka_2.11-1.1.0.tgz (asc, sha512)
-
+				Scala 2.12  - kafka_2.12-3.7.1.tgz
 Part 1 :
 ----------------------------------------
 
