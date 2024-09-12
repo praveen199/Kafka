@@ -10,15 +10,15 @@ Part 1 :
 
 command to start zookeeper
 ----------------------------------------
-zookeeper-server-start.bat C:\kafka_2.11-1.1.0\config\zookeeper.properties
+zookeeper-server-start.bat ../../config/zookeeper.properties
 
 command to start kafka server
 ----------------------------------------
-kafka-server-start.bat C:\kafka_2.11-1.1.0\config\server.properties
+kafka-server-start.bat ../../config/server.properties
 
 command to create topic
 ----------------------------------------
-kafka-topics.bat --bootstrap-server localhost:9092 --create --topic mytopic --partitions 2 --replication-factor 3
+kafka-topics.bat --bootstrap-server localhost:9092 --create --topic mytopic --partitions 2 --replication-factor 1
 
 command to Consume a message
 ----------------------------------------
@@ -62,7 +62,7 @@ Part 3 :
 
 List down all available topics
 ----------------------------------------
-kafka-topics.bat --list --zookeeper localhost:2181
+kafka-topics.bat --list --bootstrap-server localhost:9092
 
 Produce a message
 ----------------------------------------
@@ -72,7 +72,14 @@ Consume a message
 ----------------------------------------
 kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic cloud_stream_topic
 
+Describe a topic
+----------------------------------------
+kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic first_topic
 
+Increase the number of partitions
+----------------------------------------
+kafka-topics.bat --bootstrap-server localhost:9092 --alter --topic first_topic --partitions 5
 
-
-
+Delete Topic
+----------------------------------------
+kafka-topics.bat --bootstrap-server localhost:9092 --delete --topic first_topic
