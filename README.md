@@ -24,6 +24,26 @@ command to Consume a message
 ----------------------------------------
 kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic first_topic
 
+List down all available topics
+----------------------------------------
+kafka-topics.bat --list --bootstrap-server localhost:9092
+
+Produce a message
+----------------------------------------
+kafka-console-producer.bat --broker-list localhost:9092 --topic cloud_stream_topic
+
+Describe a topic
+----------------------------------------
+kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic first_topic
+
+Increase the number of partitions
+----------------------------------------
+kafka-topics.bat --bootstrap-server localhost:9092 --alter --topic first_topic --partitions 5
+
+Delete Topic
+----------------------------------------
+kafka-topics.bat --bootstrap-server localhost:9092 --delete --topic first_topic
+
 Part 2 :
 ----------------------------------------
 
@@ -58,28 +78,3 @@ Part 3 :
 	cloud stream messaging
 	kafka
 	lombok
-
-
-List down all available topics
-----------------------------------------
-kafka-topics.bat --list --bootstrap-server localhost:9092
-
-Produce a message
-----------------------------------------
-kafka-console-producer.bat --broker-list localhost:9092 --topic cloud_stream_topic
-
-Consume a message
-----------------------------------------
-kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic cloud_stream_topic
-
-Describe a topic
-----------------------------------------
-kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic first_topic
-
-Increase the number of partitions
-----------------------------------------
-kafka-topics.bat --bootstrap-server localhost:9092 --alter --topic first_topic --partitions 5
-
-Delete Topic
-----------------------------------------
-kafka-topics.bat --bootstrap-server localhost:9092 --delete --topic first_topic
