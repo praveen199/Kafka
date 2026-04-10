@@ -4,6 +4,31 @@ Kafka version : 3.7.1
 
 		  Binary downloads:
 				Scala 2.12  - kafka_2.12-3.7.1.tgz
+												
+command to create topic(Using Dcoker)
+----------------------------------------
+kafka-topics.bat --bootstrap-server localhost:9092 --create --topic mytopic --partitions 2 --replication-factor 1
+
+docker exec -it kafka kafka-topics --create --topic mytopic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
+
+docker exec -it kafka kafka-topics --create --topic user-topic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
+
+dead letter topic
+----------------------------------------
+
+docker exec -it kafka kafka-topics --create --topic main-topic-dlt --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
+
+
+list of all topic
+-----------------------------------------
+docker exec kafka kafka-topics --bootstrap-server localhost:9092 --list
+
+Delete Topic
+----------------------------------------
+docker exec kafka  kafka-topics --bootstrap-server localhost:9092 --delete --topic mytopic
+
+
+
 Part 1 :
 ----------------------------------------
 
