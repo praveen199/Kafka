@@ -1,5 +1,6 @@
 package com.spring.kafka.consumer;
 
+import com.spring.kafka.event.UserEvent;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
@@ -7,11 +8,12 @@ import org.springframework.stereotype.Service;
 public class MessageConsumer {
 
   @KafkaListener(topics = "mytopic", groupId = "group-1")
-  public void consume(String message) {
-    System.out.println("Received: " + message);
+  public void consume(UserEvent event) {
+    System.out.println("Received Order: " + event.getOrderId());
 
-    if (message.contains("fail")) {
-      throw new RuntimeException("Simulated failure!");
+    // Business failure simulation
+    if (event.getQuantity() < 0) {
+      throw new RuntimeException("Invalid quantity!");
     }
   }
 }
